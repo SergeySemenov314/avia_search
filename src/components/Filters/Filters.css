@@ -1,0 +1,123 @@
+
+.filters {
+    flex-shrink: 0;
+    align-self: flex-start;
+    padding-top: 36px;
+    padding-bottom: 144px;
+    background-color: #d9d9d9;
+}
+
+.filters__inner {
+    padding: 30px 14px 40px 37px;
+    background-color: #fff;
+}
+
+.filters__sort {
+    margin-bottom: 36px;
+
+}
+
+
+.sort-filter {}
+
+.sort-filter__heading {
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.sort-filter__input-box {}
+
+.sort-filter__radio {
+    margin-right: 5px;
+}
+
+.sort-filter__label {}
+
+/* transfer-filter  */
+
+.filters__transfer {
+    margin-bottom: 18px;
+}
+
+
+.transfer-filter {}
+
+.transfer-filter__heading {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.transfer-filter__input-box {}
+
+.transfer-filter__radio {
+    margin-right: 5px;
+}
+
+.transfer-filter__label {}
+
+/* price-filter */
+.filters__price {
+    margin-bottom: 18px;
+
+}
+
+
+.price-filter {}
+
+.price-filter__heading {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.price-filter__input-box {
+    margin-bottom: 18px;
+}
+
+.price-filter__input-box:last-child {
+    margin-bottom: 0;
+}
+
+.price-filter__label {
+    margin-right: 5px;
+}
+
+.price-filter__radio {}
+
+/* company-filter */
+
+.filters__company {}
+
+.company-filter {}
+
+.company-filter__heading {
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.company-filter__input-box {
+    display: flex;
+    align-items: center;
+}
+
+.company-filter__radio {
+    margin-right: 5px;
+}
+
+.company-filter__label {
+    display: flex;
+    align-items: center;
+}
+
+.company-filter__name {
+    display: block;
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 9px;
+}
+
+.company-filter__price {}
+
+
+

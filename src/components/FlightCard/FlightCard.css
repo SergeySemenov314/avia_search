@@ -1,0 +1,53 @@
+
+.flight-card {
+    width: 640px;
+    margin-bottom: 30px;
+}
+
+.flight-card:last-child {
+    margin-bottom: 18px;
+}
+
+.flight-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #0087c9;
+}
+
+.flight-card__logo-container {}
+
+.flight-card__logo-img {
+    width: 60px;
+}
+
+.flight-card__price-container {}
+
+.flight-card__price-value {
+    display: block;
+    font-size: 24px;
+    color: white;
+    text-align: right;
+}
+
+.flight-card__price-description {
+    font-size: 12px;
+    display: block;
+    color: white;
+    text-align: right;
+
+}
+
+
+.flights__button-more {
+    display: block;
+    width: 255px;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    border:1px solid #575454;
+    background-color: #f1f1f1;
+    margin: 0 auto 30px;
+}

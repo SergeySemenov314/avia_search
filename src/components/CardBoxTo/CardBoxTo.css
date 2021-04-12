@@ -1,0 +1,137 @@
+
+.flight-card__info-container {
+    padding: 10px;
+    padding-top: 12px;
+}
+
+.flight-card__flight-to {}
+
+.flight-card__route {
+    padding: 0 12px 9px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 9px;
+}
+
+.flight-card__route-from {
+    padding-right: 22px;
+    margin-right: 5px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABJElEQVRoge3VsUsCcRQH8PfOChxbdPJc2hsEN+fQm9tqLYgguKWpXUHkWgJnaclZwamhlqDoH2g5b9IlaErhfA2nDsfdqUH5Dr6f8ffeD97j/R4/IgAAAAAAACVqjvdg3bn76+Ybf1nM78ixTIx3qzWsrJOtsAEiYimKQY9Vx6uX2q+7Sak6GwhkmOQ6/517Pmp5B3FJmhsICJUzhrxZt+5ZVJj/u55Vas5Q4qPc5b3Zee+i+Lk8Sb6gkLDLIqc923wiSmMDAV+Im+Ps6Eb/Dqyws+0CNjZ/Qn27EDyhbdcTtukSp2UCX8Ry2b8yO+FAGhp48Wd8MrDNj6ig5iX2hbgxyo4rA7sQWTyR1gmEFjWJugkwy/10Mj1cfFQAAAAAAABxfgBodV3YKWtIJwAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 8%;
+}
+
+.flight-card__airport {
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+.flight-card__airport-code {
+    color: #0087c9;
+}
+
+.flight-card__route-to {}
+
+.flight-card__time-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 5px;
+}
+
+.flight-card__departure {}
+
+.flight-card__departure-time {
+    font-size: 20px;
+}
+
+.flight-card__departure-date {
+    color: #258DD0;
+    font-size: 16px;
+}
+
+.flight-card__duration {
+    display: flex;
+}
+
+.flight-card__duration-icon {
+    margin-right: 5px;
+}
+
+.flight-card__duration-time {
+    font-size: 20px;
+
+}
+
+.flight-card__arrival {}
+
+.flight-card__arrival-date {
+    color: #258DD0;
+    font-size: 16px;
+}
+
+.flight-card__arrival-time {
+    font-size: 20px;
+}
+
+.flight-card__transplants {
+    position: relative;
+    width: 88%;
+  
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    color: orange;
+    margin-bottom: 14px;
+}
+
+.flight-card__transplants::after {
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 200px;
+    background-color: #a2a2a2;
+
+}
+
+.flight-card__transplants::before {
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 200px;
+    background-color: #a2a2a2;
+
+} 
+
+.flight-card__transplants-line {
+    width: 88%;
+    height: 1px;
+    background-color: #a2a2a2;
+    margin-top: 15px;
+    margin-bottom: 14px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.flight-card__company {
+    font-size: 16px;
+}
+
+.flight-card__hr {}
+
+.flight-card__flight-back {}
+
+.flight-card__button {
+    width: 100%;
+    height: 38px;
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #ffb168;
+}
