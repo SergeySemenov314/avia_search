@@ -6,6 +6,15 @@ import {  useState } from 'react';
 
 function App() {
 
+  const [filters, setFilters] = useState({
+    sort:'', 
+    oneTransplant: false, 
+    zeroTransplants: false,
+    minPrice: 0,
+    maxPrice: 10000000,
+    companies: [],
+  })
+
   let flightsArr = data.result.flights;
 
   const [currentFlights, setCurrentFlights] = useState(flightsArr);
@@ -106,6 +115,9 @@ function App() {
      <div className="container">
        <div className="main-content">
          <Filters 
+         filters = {filters}
+         setFilters = {setFilters}
+
          reducePrice = {reducePrice}
          increasePrice = {increasePrice}
          sortDuration = {sortDuration}
