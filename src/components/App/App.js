@@ -9,8 +9,8 @@ function App() {
 
   const [filters, setFilters] = useState({
     sort:'', 
-    oneTransplant: false, 
-    zeroTransplants: false,
+    isOneTransplant: false, 
+    isZeroTransplants: false,
     minPrice: 0,
     maxPrice: 10000000,
     companies: [],
@@ -20,25 +20,6 @@ function App() {
 
   const filteredFlights = useFilteredFlights(flightsArr, filters);
 
-
-//   let transplantsFilter = (evt) => {
-//     let filterTransplantsAmount = evt.target.dataset.amount;
-    
-//     let tmpFlights = currentFlights.filter((item) => {
-
-//       let toTransplantsAmount = item.flight.legs[0].segments.length - 1;
-//       let backTransplantsAmount = item.flight.legs[1].segments.length - 1;
-//       let transplantsSum = toTransplantsAmount + backTransplantsAmount;
-
-//       if (filterTransplantsAmount == transplantsSum) {   
-//           return true
-//       }
-
-//     })
-
-//     // setCurrentFlights(tmpFlights);
-
-//   }
 
 
 //   let priceFilter = (evt) => {

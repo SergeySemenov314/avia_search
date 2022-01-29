@@ -41,13 +41,13 @@ function Filters({filters, setFilters}) {
                    <p className="transfer-filter__heading">Фильтровать</p>
                    <div className="transfer-filter__input-box">
                       <input type="checkbox" id = 'transfer1' name = 'transfer' className="transfer-filter__radio" data-amount = '1' 
-                         onChange = {(e) => setFilters({...filters, oneTransplant: e.target.checked}) } 
+                         onChange = {(e) => setFilters({...filters, isOneTransplant: e.target.checked}) } 
                       />
                       <label htmlFor="transfer1" className="transfer-filter__label">- 1 пересадка</label>
                     </div> 
                     <div className="transfer-filter__input-box">
                       <input type="checkbox" id = 'transfer2' name = 'transfer' className="transfer-filter__radio" data-amount = '0' 
-                        onChange = {(e) => setFilters({...filters, zeroTransplants: e.target.checked}) } 
+                        onChange = {(e) => setFilters({...filters, isZeroTransplants: e.target.checked}) } 
                       />
                       <label htmlFor="transfer2" className="transfer-filter__label">- без пересадок</label>
                     </div>                   
