@@ -12,7 +12,7 @@ function App() {
     isOneTransplant: false, 
     isZeroTransplants: false,
     minPrice: 0,
-    maxPrice: 10000000,
+    maxPrice: 0,
     companies: [],
   })
 

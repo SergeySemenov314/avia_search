@@ -79,13 +79,51 @@ export const useTransplantsFilter = (flightsArr, isOneTransplant, isZeroTranspla
 }
 
 
+export const usePriceFilter = (flightsArr, minPrice, maxPrice) => {
+
+    const priceFilteredFlights  = useMemo(() => {
+
+        if(minPrice || maxPrice) {
+
+            let priceFilteredFlights = [];
+
+            if((minPrice && maxPrice) || (!minPrice && maxPrice)) {
+
+                priceFilteredFlights = [...flightsArr].filter((item) => {
+                    let price = item.flight.price.total.amount;
+                    return (price >= maxPrice) && (price <= maxPrice);
+                })
+
+            } 
+            else if(minPrice) {
+
+                priceFilteredFlights = [...flightsArr].filter((item) => {
+                    let price = item.flight.price.total.amount;
+                    return price >= minPrice;
+                })
+
+            }
+            return priceFilteredFlights;   
+        }
+        return flightsArr;
+
+    }, [flightsArr, minPrice, maxPrice])
+
+    return priceFilteredFlights;
+
+
+}
+
+
 export const useFilteredFlights = (flightsArr, filters) => {
 
     const sortedFlights = useSortedFlights(flightsArr, filters.sort)
 
     const transplantsFilteredFlights = useTransplantsFilter(sortedFlights, filters.isOneTransplant, filters.isZeroTransplants)
 
-    const filteredFlights = [...transplantsFilteredFlights];
+    const priceFilteredFlights = usePriceFilter(transplantsFilteredFlights, filters.minPrice, filters.maxPrice)
+
+    const filteredFlights = [...priceFilteredFlights];
 
     return filteredFlights;
 
