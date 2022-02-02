@@ -57,13 +57,13 @@ function Filters({filters, setFilters}) {
                    <div className="price-filter__input-box">          
                       <label htmlFor="price1" className="price-filter__label">От</label>
                       <input type="number" id = 'price1' name = 'price' className="price-filter__radio" placeholder ='0'  
-                        onInput={(e) => setFilters({...filters, minPrice: e.target.value}) }
+                        onInput={(e) => setFilters({...filters, minPrice: Number(e.target.value)}) }
                       />
                     </div>  
                     <div className="price-filter__input-box">          
                       <label htmlFor="price2" className="price-filter__label">До</label>
                       <input type="number" id = 'price2' name = 'price' className="price-filter__radio" placeholder ='10000'
-                        onInput={(e) => setFilters({...filters, maxPrice: e.target.value}) }
+                        onInput={(e) => setFilters({...filters, maxPrice: Number(e.target.value)}) }
                       />
                     </div>  
                  </div>

@@ -87,11 +87,11 @@ export const usePriceFilter = (flightsArr, minPrice, maxPrice) => {
 
             let priceFilteredFlights = [];
 
-            if((minPrice && maxPrice) || (!minPrice && maxPrice)) {
+            if(maxPrice) {
 
                 priceFilteredFlights = [...flightsArr].filter((item) => {
                     let price = item.flight.price.total.amount;
-                    return (price >= maxPrice) && (price <= maxPrice);
+                    return (price >= minPrice) && (price <= maxPrice);
                 })
 
             } 
