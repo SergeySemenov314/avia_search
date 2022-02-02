@@ -21,18 +21,6 @@ function App() {
   const filteredFlights = useFilteredFlights(flightsArr, filters);
 
 
-
-//   let priceFilter = (evt) => {
-//     let maxPrice = evt.target.value;
-
-//     let tmpFlights = currentFlights.filter((item) => {
-//       let price = item.flight.price.total.amount;
-//       return price <= maxPrice;
-//     })
-    
-//     // setCurrentFlights(tmpFlights);
-//   }
-
 //   let companyFilter = (evt) => {
 //     console.log ('companyFilter')
 //     let filterCompany = evt.target.dataset.company;
