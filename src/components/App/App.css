@@ -74,15 +74,5 @@ input::-webkit-inner-spin-button {
     display: flex;
 }
 
-/*============== flights ============== */
 
-.flights {
-    padding: 20px 46px 0 24px;
-    background-color: #fff;
 
-}
-
-.flights__inner {
-    background-color: #fff;
-
-}
