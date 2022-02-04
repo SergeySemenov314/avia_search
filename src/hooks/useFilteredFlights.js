@@ -146,9 +146,9 @@ export const useFilteredFlights = (flightsArr, filters) => {
 
     const priceFilteredFlights = usePriceFilter(transplantsFilteredFlights, filters.minPrice, filters.maxPrice)
 
-    const filteredFlights = [...priceFilteredFlights];
+    const сompaniesFilteredFlights = useCompaniesFilter(priceFilteredFlights, filters.companies)
+
+    const filteredFlights = [...сompaniesFilteredFlights];
 
     return filteredFlights;
-
-
 }
