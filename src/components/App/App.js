@@ -20,25 +20,9 @@ function App() {
 
   const filteredFlights = useFilteredFlights(flightsArr, filters);
 
+  const [cardsOnPage, setCardsOnPage] = useState(4);
 
-//   let companyFilter = (evt) => {
-//     console.log ('companyFilter')
-//     let filterCompany = evt.target.dataset.company;
-    
-//     let tmpFlights = currentFlights.filter((item) => {
-
-//       let flightCompany = item.flight.legs[0].segments[0].airline.caption;
-
-//       if (filterCompany == flightCompany) {   
-//           return true
-//       }
-
-//     })
-
-//     // setCurrentFlights(tmpFlights);
-//   }
-  
-
+  const flightsToShowArr = filteredFlights.slice(0, cardsOnPage);
 
 
 
@@ -56,12 +40,12 @@ function App() {
           <div className="flights">
             <div className="flights__inner">
               
-              {filteredFlights.map((item, index) => 
+              {flightsToShowArr.map((item, index) => 
                      <FlightCard flight = {item.flight} key = {index} />
               )}
           
             </div>  {/* /flights__inner */}
-            <button className="flights__button-more">Показать еще</button>
+            <button className="flights__button-more" onClick={() => setCardsOnPage(cardsOnPage + 4)}>Показать еще</button>
           </div>    {/* flights */}      
        </div> {/* /main-content */}
      </div>{/* /container */}
