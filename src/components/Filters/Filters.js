@@ -1,6 +1,8 @@
+import { useGetAllCompanies } from '../../hooks/useGetAllCompanies';
+import { useSortedFlights } from '../../hooks/useSortedFlights';
 import './Filters.css';
 
-function Filters({filters, setFilters}) {
+function Filters({filters, setFilters, flightsArr}) {
 
   const changeCompanyCheckbox = (e) => {
     if (e.target.checked) {
@@ -10,6 +12,9 @@ function Filters({filters, setFilters}) {
     }
 
   }
+
+  const companiesArr = useGetAllCompanies(flightsArr);
+
 
 
     return (
@@ -69,33 +74,24 @@ function Filters({filters, setFilters}) {
                  </div>
                  <div className="company-filter filters__company">
                    <p className="company-filter__heading">Авиакомпании</p>
-                   <div className="company-filter__input-box">
-                      <input type="checkbox" id = 'company1' name = 'company' className="company-filter__radio" data-company = 'Air France' value = "Air France" 
-                        onChange = {changeCompanyCheckbox}
-                      />
-                      <label htmlFor="company1" className="company-filter__label">
-                        <span className="company-filter__name">- Air France </span><span className="company-filter__price">от 21000</span>
-                      </label>
-                    </div> 
-                    <div className="company-filter__input-box">
-                      <input type="checkbox" id = 'company2' name = 'company' className="company-filter__radio" data-company = 'KLM' value = "KLM" onChange = {changeCompanyCheckbox}/>
-                      <label htmlFor="company2" className="company-filter__label">
-                        <span className="company-filter__name">- KLM </span><span className="company-filter__price">от 21000</span>
-                      </label>
-                    </div> 
-                    <div className="company-filter__input-box">
-                      <input type="checkbox" id = 'company3' name = 'company' className="company-filter__radio" data-company = 'Аэрофлот - российские авиалинии' value = "Аэрофлот - российские авиалинии" onChange = {changeCompanyCheckbox}/>
-                      <label htmlFor="company3" className="company-filter__label">
-                        <span className="company-filter__name">- Аэрофлот - российские авиалинии </span><span className="company-filter__price">от 21000</span>
-                      </label>
-                    </div> 
-                    <div className="company-filter__input-box">
-                      <input type="checkbox" id = 'company4' name = 'company' className="company-filter__radio" data-company = 'TURK HAVA YOLLARI A.O.' value = "TURK HAVA YOLLARI A.O." onChange = {changeCompanyCheckbox}/>
-                      <label htmlFor="company4" className="company-filter__label">
-                        <span className="company-filter__name">- TURK HAVA YOLLARI A.O. </span><span className="company-filter__price">от 21000</span>
-                      </label>
-                    </div> 
-                   
+
+                   {companiesArr.map(company => 
+                        <div className="company-filter__input-box">
+                            <input 
+                                type="checkbox" 
+                                id = 'company1' 
+                                name = 'company' 
+                                className="company-filter__radio" 
+                                value = "Air France" 
+                                onChange = {changeCompanyCheckbox}
+                            />
+                            <label htmlFor="company1" className="company-filter__label">
+                                <span className="company-filter__name">- {company} </span>
+                                <span className="company-filter__price">от 21000</span>
+                            </label>
+                        </div>
+                    )}
+
                  </div>
               </div>{/* /filters__inner */}
           </div>{/* /filters */}

@@ -28,6 +28,7 @@ function App() {
          <Filters 
             filters = {filters}
             setFilters = {setFilters}
+            flightsArr = {flightsArr}
         />
         <FlightsList 
             filteredFlights = {filteredFlights} 
