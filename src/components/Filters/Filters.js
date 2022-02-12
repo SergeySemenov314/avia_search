@@ -75,17 +75,17 @@ function Filters({filters, setFilters, flightsArr}) {
                  <div className="company-filter filters__company">
                    <p className="company-filter__heading">Авиакомпании</p>
 
-                   {companiesArr.map(company => 
+                   {companiesArr.map((company, index) => 
                         <div className="company-filter__input-box">
                             <input 
                                 type="checkbox" 
-                                id = 'company1' 
+                                id = {'company' + String(index)} 
                                 name = 'company' 
                                 className="company-filter__radio" 
-                                value = "Air France" 
+                                value = {company} 
                                 onChange = {changeCompanyCheckbox}
                             />
-                            <label htmlFor="company1" className="company-filter__label">
+                            <label htmlFor={'company' + String(index)} className="company-filter__label">
                                 <span className="company-filter__name">- {company} </span>
                                 <span className="company-filter__price">от 21000</span>
                             </label>
